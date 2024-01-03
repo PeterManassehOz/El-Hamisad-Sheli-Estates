@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>
+    El Hamisad Sheli Real Estates/Details
+    </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Scepter">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUfdRbRt4Xp6-x_nB9g61qWwm8XQbta7PbuhSDHYACGEP7mIJgkoUjfrkaWKGIiqfLdf0&usqp=CAU">
+    <link rel="stylesheet" href="first.css">
+    </head>
+    <body>
+      <nav>
+        <ul>
+           <li><a href="index.html">HOME</a></li>
+           <li><a href="proPerties.html">PROPERTIES</a></li>
+         </ul>
+       </nav>
+      <main>
+        <h1>Message Body</h1>
+          <div id="data"></div>
+        <div>
+        <button id="btn">Confirm</button>
+        </div>
+     </main>
+     
+
+
+   
+
+<script>
+const json = localStorage.getItem('form');
+const obj = JSON.parse(json);
+
+for (key in obj) {
+const markup = `
+<div>
+  <span>${key}: ${obj[key]}</span>
+</div>
+`;
+document.getElementById('data').innerHTML += markup;
+}
+
+
+</script>
+
+
+
+
+
+    
+      </body>
+  </html>
